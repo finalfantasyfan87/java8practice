@@ -18,8 +18,13 @@ public class Practice1 {
     }
 
     public List<String> getNamesThatStartWithJ(List<String> listOfNames){
-        Predicate<String> startsWithPredicate = name -> name.startsWith("J");
-        return listOfNames.stream().filter(startsWithPredicate).collect(Collectors.toList());
+        Predicate<String> startsWithJPredicate = name -> name.startsWith("J");
+        return listOfNames.stream().filter(startsWithJPredicate).collect(Collectors.toList());
+    }
+
+    public String getNumsThatStartWith9 (List<Integer> numbersList){
+        Predicate<String> startsWith9 = num -> num.startsWith("9");
+        return numbersList.stream().map(num -> num + "" ).filter(startsWith9).collect(Collectors.joining(","));
     }
 
 }

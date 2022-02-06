@@ -37,5 +37,8 @@ public class LessonController {
         return practice.getNamesThatStartWithJ(namesList);
     }
 
-
+    @GetMapping("startsWith9")
+    public String getList(){
+        return practice.getNumsThatStartWith9(numbersList);
+    }
 }
