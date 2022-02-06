@@ -34,8 +34,7 @@ public class LessonController {
 
     @GetMapping("/jNames")
     public List<String> getJNames(){
-        List<String> jNameList = practice.getNamesThatStartWithJ(namesList);
-        return jNameList;
+        return practice.getNamesThatStartWithJ(namesList);
     }
 
 
